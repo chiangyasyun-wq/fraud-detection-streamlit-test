@@ -249,4 +249,4 @@ if page == "📊 頁面一：即時戰情與多層級授信決策":
         top_feat_idx = np.argsort(np.abs(sample_shap))[::-1][:3]
         st.markdown("##### 🔬 SHAP 關鍵特徵貢獻拆解：")
         for i in top_feat_idx:
-            st.write(f"- **{features[i]}**: 標準化數值 = `{X_test_sca
+           st.write(f"- **{features[i]}**: 標準化數值 = `{X_test_scaled[fraud_idx, i]:.2f}`，SHAP 貢獻 = `{sample_shap[i]:.4f}`")
